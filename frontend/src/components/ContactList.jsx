@@ -4,7 +4,7 @@ function ContactList({ contacts, onDelete }) {
             {contacts.map(c => (
                 <li key={c._id}>
                     {c.name} - {c.phone}
-                    <button onClick={() => onDelete(c._id)}></button>
+                    <button onClick={() => onDelete(c._id)}>❌</button>
                 </li>
             ))}
         </ul>
