@@ -10,3 +10,5 @@ function ContactList({ contacts, onDelete }) {
         </ul>
     )
 }
+
+export default ContactList;
