@@ -17,5 +17,8 @@ router.post("/", async (req,res) => {
 
 //DELETE contact
 router.delete("/:id", async (req,res) => {
-    await Contact.find
-})
+    await Contact.findByIdAndDelete(req.params.id);
+    res.json({ message: "Contact deleted "});
+});
+
+module.exports = router;
