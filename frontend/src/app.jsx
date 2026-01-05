@@ -19,10 +19,11 @@ function App() {
     };
 
     return (
-        <>
-            <Contact Form onAdd={handleAdd} />
+        <div>
+            <h2>Contact Manager</h2>
+            <ContactForm onAdd={handleAdd} />
             <ContactList contacts={contacts} onDelete={handleDelete} />
-        </>
+        </div>
     );
 }
 
