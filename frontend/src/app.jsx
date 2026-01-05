@@ -9,6 +9,21 @@ function App() {
     }, []);
     
     const handleAdd = async (contact) => {
-        const saved =
-    }
+        const saved = await addContact(contact);
+        setContacts([...contacts, saved]);
+    };
+
+    const handleDelete = async (id) => {
+        await deleteContact(id);
+        setContacts(contacts.filter(c => c._id !== id));
+    };
+
+    return (
+        <>
+            <Contact Form onAdd={handleAdd} />
+            <ContactList contacts={contacts} onDelete={handleDelete} />
+        </>
+    );
 }
+
+export default App;
