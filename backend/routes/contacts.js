@@ -11,4 +11,11 @@ router.get("/", async (req,res) => {
 // POST new contact
 router.post("/", async (req,res) => {
     const contact = new Contact(req.body);
+    const saved = await contact.save();
+    res.status(201).json(saved);
+});
+
+//DELETE contact
+router.delete("/:id", async (req,res) => {
+    await Contact.find
 })
