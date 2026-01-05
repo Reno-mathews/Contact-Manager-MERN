@@ -15,5 +15,14 @@ function ContactForm({ onAdd }) {
         setPhone("");
     };
 
-    return 
+    return (
+        <form onSubmit={submit}>
+            <input placeholder="Name" value={name} onChnage={e => setName(e.target.value)} />
+            <input placeholder="Email" value={email} onChnage={e => setEmail(e.target.value)} />
+            <input placeholder="Phone" value={phone} onChnage={e => setPhone(e.target.value)} />
+            <button>Add</button>
+        </form>
+    );
 }
+
+export default ContactForm;
