@@ -15,5 +15,5 @@ export const addContact = async (contact) => {
 };
 
 export const deleteContact = async (id) => {
-    await fetch
-}
+    await fetch(`${API_URL}/${id}`, { method: "DELETE"});
+};
